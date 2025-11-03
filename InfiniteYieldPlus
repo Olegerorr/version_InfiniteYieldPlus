@@ -127,7 +127,7 @@ if makefolder and isfolder and writefile and isfile then
 	end)
 end
 
-currentVersion = "7.0.4"
+currentVersion = "7.0.5"
 
 ScaledHolder = Instance.new("Frame")
 Scale = Instance.new("UIScale")
@@ -4580,6 +4580,7 @@ CMDs[#CMDs + 1] = {NAME = '', DESC = ''}
 CMDs[#CMDs + 1] = {NAME = 'btools (CLIENT)', DESC = 'Gives you building tools (DOES NOT REPLICATE)'}
 CMDs[#CMDs + 1] = {NAME = 'f3x (CLIENT)', DESC = 'Gives you F3X building tools (DOES NOT REPLICATE)'}
 CMDs[#CMDs + 1] = {NAME = 'Coolgui (CLIENT)', DESC = 'Coolgui (command by:erorr234566)'}
+CMDs[#CMDs + 1] = {NAME = 'Ban-All', DESC = 'Report All User is Server (command by:erorr234566)'}
 CMDs[#CMDs + 1] = {NAME = 'partname / partpath', DESC = 'Allows you to click a part to see its path & name'}
 CMDs[#CMDs + 1] = {NAME = 'delete [instance name] (CLIENT)', DESC = 'Removes any part with a certain name from the workspace (DOES NOT REPLICATE)'}
 CMDs[#CMDs + 1] = {NAME = 'deleteclass / dc [class name] (CLIENT)', DESC = 'Removes any part with a certain classname from the workspace (DOES NOT REPLICATE)'}
@@ -6439,7 +6440,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://gist.githubusercontent.com/Olegerorr/de38095c79b4343746db65c72f2f2c06/raw/c1fe05129c3915a786950079acf9d95ae02cb57f/infiniteyield+'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/refs/heads/main/InfiniteYieldPlus'))()")
 	end
 end)
 
@@ -8683,8 +8684,8 @@ addcmd('f3x',{'fex'},function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/refs/heads/main/f3x.lua"))()
 end)
 
-addcmd('Coolgui',{'fex'},function(args, speaker)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/MiRw3b/c00lgui-v3rx/main/c00lguiv3rx.lua"))()
+addcmd('Ban-All',{'fex'},function(args, speaker)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/refs/heads/main/ReportSystemScript"))()
 end)
 
 addcmd('Coolgui',{'fex'},function(args, speaker)
@@ -13079,13 +13080,13 @@ end)
 
 task.spawn(function()
 	local success, latestVersionInfo = pcall(function() 
-		local versionJson = game:HttpGet("https://gist.githubusercontent.com/Olegerorr/2bc9018c67352ce9b99ecb530f05fd8f/raw/e3bdc3356e8b331402b60296478d2c96f90b9437/version.lua")
+		local versionJson = game:HttpGet("https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/refs/heads/main/version")
 		return HttpService:JSONDecode(versionJson)
 	end)
 
 	if success then
 		if currentVersion ~= latestVersionInfo.Version then
-			notify("Outdated", "Get the new version at infyiff.github.io")
+			notify("Outdated", "Get the new version at github.com/Olegerorr/version_InfiniteYieldPlus")
 		end
 
 		if latestVersionInfo.Announcement and latestVersionInfo.Announcement ~= "" then
