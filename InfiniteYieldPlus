@@ -10120,13 +10120,13 @@ promptNewRig = function(speaker, rig)
 	end
 end
 
-addcmd("promptr6", {}, function(args, speaker)
-	promptNewRig(speaker, "R6")
-end)
+-- addcmd("promptr6", {}, function(args, speaker)
+--	promptNewRig(speaker, "R6")
+-- end)
 
-addcmd("promptr15", {}, function(args, speaker)
-	promptNewRig(speaker, "R15")
-end)
+-- addcmd("promptr15", {}, function(args, speaker)
+--	promptNewRig(speaker, "R15")
+-- end)
 
 addcmd("wallwalk", {"walkonwalls"}, function(args, speaker)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/wallwalker.lua"))()
@@ -11741,7 +11741,7 @@ end)
 
 addcmd("explorer++", {"dex++"}, function(args, speaker)
 	notify("Loading", "Hold on a sec")
-	loadstring(game:HttpGet("https://gist.githubusercontent.com/Olegerorr/b16a21239bb766a815ed4a4c87be5ace/raw/480f5aaca7cbdbfcfc1fda69c7bea9e7df3722df/dex++"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/refs/heads/main/dex%2B%2B.lua"))()
 end)
 
 addcmd('olddex', {'odex'}, function(args, speaker)
