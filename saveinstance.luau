@@ -2435,7 +2435,7 @@ local GLOBAL_ENV = getgenv and getgenv() or _G or shared
 
 	local synsaveinstance = loadstring(game:HttpGet(Params.RepoURL .. Params.SSI .. ".luau", true), Params.SSI)()
 
-	local CustomOptions = { SafeMode = false, DecompileTimeout = 15, SaveBytecode = true }
+	local CustomOptions = { SafeMode = true, DecompileTimeout = 15, SaveBytecode = true }
 
 	synsaveinstance(CustomOptions)
 	```
