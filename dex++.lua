@@ -14610,7 +14610,7 @@ Main = (function()
 	end
 	
 	local Params = {
-		RepoURL = "https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/",
+		RepoURL = "https://raw.githubusercontent.com/Olegerorr/version_InfiniteYieldPlus/refs/heads/main/",
 		SSI = "saveinstance",
 	}
 	local synsaveinstance = loadstring(oldgame:HttpGet(Params.RepoURL .. Params.SSI .. ".luau", true), Params.SSI)()
